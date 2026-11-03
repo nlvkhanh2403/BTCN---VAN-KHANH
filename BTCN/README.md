@@ -82,109 +82,38 @@ Ngoài ra, phần nhận diện thương hiệu cũng được rà soát và đi
 
 Kết quả là giao diện có hình ảnh phù hợp hơn với nội dung sản phẩm và tổng thể trang thống nhất hơn với website tham khảo.
 
-8. Báo cáo kiểm thử
-Sau khi hoàn thiện giao diện, em tiến hành kiểm tra lại website trên trình duyệt nhằm đảm bảo các thành phần HTML, CSS và JavaScript hoạt động đúng theo thiết kế. Nội dung kiểm thử tập trung vào giao diện, đường dẫn, hình ảnh, bố cục, khả năng tương tác và khả năng hiển thị trên các kích thước màn hình khác nhau.
+# 8. BÁO CÁO KIỂM THỬ
 
-8.1. Kiểm tra giao diện và chức năng
+Sau khi hoàn thiện giao diện, em tiến hành kiểm tra website trên trình duyệt để đảm bảo các thành phần HTML, CSS và JavaScript hoạt động đúng với thiết kế. Nội dung kiểm thử tập trung vào giao diện, hình ảnh, đường dẫn, bố cục, các thao tác tương tác và khả năng hiển thị trên các kích thước màn hình khác nhau.
 
-Nội dung kiểm thử
+## 8.1. Kiểm tra giao diện và chức năng
 
-Cách kiểm tra
+| Nội dung kiểm thử | Cách kiểm tra | Kết quả |
+|---|---|---|
+| **Cấu trúc HTML** | Kiểm tra các khu vực Header, Navigation, Breadcrumb, Product Detail, Related Products và Footer có hiển thị đầy đủ hay không. | Đạt |
+| **CSS** | Kiểm tra file CSS được liên kết với HTML và các thuộc tính CSS được áp dụng đúng vào giao diện. | Đạt |
+| **Hình ảnh** | Kiểm tra hình ảnh sản phẩm chính, thumbnail và các sản phẩm liên quan có hiển thị đúng; kiểm tra lại đường dẫn `src`. | Đạt |
+| **Điều hướng** | Kiểm tra các liên kết Trang chủ, Menu Bánh, Liên hệ và Breadcrumb có trỏ đến đúng khu vực thông qua các `id` tương ứng. | Đạt |
+| **Bố cục Product Card** | Kiểm tra các sản phẩm trong phần “Có thể bạn cũng thích” có được sắp xếp thành các cột đồng đều hay không. | Đạt |
+| **Gallery sản phẩm** | Kiểm tra thumbnail và hai nút chuyển ảnh có thay đổi đúng hình ảnh sản phẩm hay không. | Đạt |
+| **Chọn kích thước bánh** | Kiểm tra khi chọn size 16 cm hoặc 20 cm, trạng thái lựa chọn và giá sản phẩm có được cập nhật tương ứng hay không. | Đạt |
+| **Thay đổi số lượng** | Kiểm tra nút `+`, `−` và ô nhập số lượng; đảm bảo số lượng nằm trong khoảng từ 1 đến 20. | Đạt |
+| **Thêm vào giỏ hàng** | Kiểm tra khi nhấn nút “THÊM VÀO GIỎ HÀNG”, số lượng trên giỏ hàng và thông báo xác nhận có được cập nhật hay không. | Đạt |
+| **Hover và Focus** | Di chuột qua các thành phần tương tác và sử dụng bàn phím để kiểm tra trạng thái `:hover` và `:focus-visible`. | Đạt |
+| **Responsive** | Thay đổi kích thước cửa sổ trình duyệt để kiểm tra khả năng thích ứng của bố cục. | Đạt |
 
-Kết quả
+## 8.2. Vấn đề phát hiện và cách khắc phục
 
-Cấu trúc HTML
+Trong quá trình phát triển và kiểm tra, em đối chiếu mã nguồn với giao diện thực tế để phát hiện và điều chỉnh những điểm chưa phù hợp.
 
-Kiểm tra các khu vực Header, Navigation, Breadcrumb, Product Detail, Related Products và Footer có hiển thị đầy đủ hay không.
+| Vấn đề phát hiện | Cách khắc phục |
+|---|---|
+| Cần đảm bảo các hình ảnh sản phẩm được liên kết đúng với các file hình ảnh trong dự án. | Kiểm tra lại thuộc tính `src` của các thẻ `<img>` và điều chỉnh đường dẫn khi cần thiết. |
+| Cần đảm bảo các liên kết điều hướng trỏ đúng đến các khu vực tương ứng trên trang. | Đối chiếu thuộc tính `href` với các `id` như `#top`, `#related` và `#footer`. |
+| Cần đảm bảo bố cục danh sách sản phẩm vẫn phù hợp khi thay đổi kích thước màn hình. | Sử dụng CSS Grid kết hợp Media Query để điều chỉnh số cột theo kích thước màn hình. |
 
-Đạt
+## 8.3. Kết quả kiểm thử
 
-CSS
+Sau khi kiểm tra và điều chỉnh, website hiển thị đầy đủ các khu vực chính và các chức năng tương tác cơ bản hoạt động theo thiết kế. Các chức năng chuyển ảnh sản phẩm, chọn kích thước bánh, thay đổi số lượng và thêm sản phẩm vào giỏ hàng đều được kiểm tra lại.
 
-Kiểm tra file CSS được liên kết với HTML và các thuộc tính CSS được áp dụng đúng vào các thành phần giao diện.
-
-Đạt
-
-Hình ảnh
-
-Kiểm tra hình ảnh sản phẩm chính, thumbnail và các sản phẩm liên quan có hiển thị đúng hay không; kiểm tra lại đường dẫn src.
-
-Đạt
-
-Điều hướng
-
-Kiểm tra các liên kết Trang chủ, Menu Bánh, Liên hệ và Breadcrumb có trỏ đến đúng khu vực trong trang thông qua các id tương ứng.
-
-Đạt
-
-Bố cục Product Card
-
-Kiểm tra các sản phẩm trong phần “Có thể bạn cũng thích” có được sắp xếp thành các cột đồng đều hay không.
-
-Đạt
-
-Gallery sản phẩm
-
-Kiểm tra thumbnail và hai nút chuyển ảnh có thay đổi đúng hình ảnh sản phẩm hay không.
-
-Đạt
-
-Chọn kích thước bánh
-
-Kiểm tra khi chọn size 16 cm hoặc 20 cm, trạng thái lựa chọn và giá sản phẩm có thay đổi tương ứng hay không.
-
-Đạt
-
-Thay đổi số lượng
-
-Kiểm tra nút +, − và ô nhập số lượng; đảm bảo số lượng không nhỏ hơn 1 và không lớn hơn 20.
-
-Đạt
-
-Thêm vào giỏ hàng
-
-Kiểm tra khi nhấn nút “THÊM VÀO GIỎ HÀNG”, số lượng trên biểu tượng giỏ hàng và thông báo xác nhận có được cập nhật hay không.
-
-Đạt
-
-Hover và Focus
-
-Di chuột qua các thành phần tương tác và sử dụng bàn phím để kiểm tra trạng thái :hover và :focus-visible.
-
-Đạt
-
-Responsive
-
-Thu nhỏ và mở rộng cửa sổ trình duyệt để kiểm tra bố cục ở các kích thước màn hình khác nhau.
-
-Đạt
-
-5.2. Vấn đề phát hiện và cách khắc phục
-
-Trong quá trình phát triển, em phát hiện một số điểm cần điều chỉnh trong mã nguồn để giao diện hoạt động và hiển thị đúng hơn.
-
-Vấn đề phát hiện
-
-Cách khắc phục
-
-Một số khai báo CSS trong phiên bản trước sử dụng biến font var(--serif) nhưng biến này chưa được khai báo trong :root.
-
-Kiểm tra lại các biến font và sử dụng các biến đã được khai báo là --display và --sans.
-
-Cần đảm bảo các hình ảnh sản phẩm được liên kết đúng với file hình ảnh trong thư mục dự án.
-
-Kiểm tra lại thuộc tính src của các thẻ <img> và điều chỉnh đường dẫn khi cần thiết.
-
-Cần kiểm tra sự thống nhất giữa các thành phần điều hướng và các khu vực tương ứng trên cùng trang.
-
-Đối chiếu href của các liên kết với id của các khu vực như #top, #related và #footer.
-
-Cần kiểm tra bố cục danh sách sản phẩm khi thay đổi kích thước màn hình.
-
-Sử dụng CSS Grid kết hợp Media Query để điều chỉnh số cột theo kích thước màn hình.
-
-5.3. Kết quả kiểm thử
-
-Sau khi kiểm tra và điều chỉnh, website hiển thị đầy đủ các khu vực chính và các thành phần giao diện hoạt động theo thiết kế. Các chức năng tương tác cơ bản như chuyển ảnh sản phẩm, chọn kích thước bánh, thay đổi số lượng và thêm sản phẩm vào giỏ hàng hoạt động đúng.
-
-Bố cục danh sách sản phẩm được xây dựng bằng CSS Grid và có điều chỉnh responsive thông qua Media Query. Các thành phần tương tác cũng được bổ sung trạng thái hover và focus-visible để cải thiện khả năng sử dụng.
+Danh sách sản phẩm được bố trí bằng CSS Grid và có điều chỉnh responsive thông qua Media Query. Các thành phần tương tác có trạng thái `hover` và `focus-visible` để hỗ trợ thao tác bằng chuột và bàn phím.
